@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/7hour_FreeCodeCamp/2nd_session/blackjack_dealer/style.css">
+    <title>Blackjack c/ mesa</title>
+</head>
+
+<body>
+    <div class="container">
+    <div class="box" id="dealer">
+        <h2>Dealer</h2> 
+        <p id="dealerCards-el">Cards: </p>
+        <p id="dealerSum-el">Sum: </p>
+    </div>
+    <div class="box" id="botoes">
+        <button id="start-btn" onclick="startGame()">Começar</button>
+        <br>
+        <button id="comprar-btn" onclick="comprarCarta()">Comprar</button>
+        <br>
+        <button id="passar-btn" onclick="passar()">Passar</button>
+        <p id="message-el"></p>
+        <p id="vencedor-el"></p>
+    </div>
+    <div class="box" id="jogador">
+        <h2>Você</h2>
+        <p id="playerCards-el">Cards: </p>
+        <p id="playerSum-el">Sum: </p>
+    </div>
+    <script src="index.js"></script>
+    </div>
+
+</body>
+
+</html>

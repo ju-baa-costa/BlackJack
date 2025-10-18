@@ -1,0 +1,68 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+    background-size: cover;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    margin: 0px;
+}
+
+h1 {
+    color: goldenrod;
+    font-size: larger;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    height: 80%;
+    width: 95vw;
+}
+
+#dealer, #jogador {
+    padding: 20px;
+    width: 100px;
+    height: 100%;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+#botoes {
+    padding: 20px;
+    width: 100px;
+    height: 100%;
+    width: 20%;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#message-el {
+    font-style: italic;
+}
+
+button {
+    color: #016f32;
+    width: 100%;
+    background: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    height: 50px;
+    font-size: large;
+}
+
+body {
+    background-color: #016f32;
+}
