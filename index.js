@@ -23,6 +23,8 @@ let botaoPassar= document.getElementById("passar-btn")
 
 
 function startGame() { //da as cartas, chama runGame (mostra apenas uma carta do dealer)
+    dealerSum= null
+    dealerSumEl.textContent="Sum: "
     isAlive = true
     playerFirst = getRandomCard()
     playerSecond = getRandomCard()
@@ -46,10 +48,6 @@ function startGame() { //da as cartas, chama runGame (mostra apenas uma carta do
     dealerCardsEl.textContent = "Cards: " + dealerCards[0] + " ?"
     playerSumEl.textContent = "Sum: " + playerSum
     runPlayerGame()
-    console.log(playerCardsEl)
-    console.log(dealerCardsEl)
-    console.log(playerSum)
-    console.log(dealerSum)
 }
 
 function runPlayerGame() { // faz a soma das cartas do jogador e do dealer, fala se perdeu, ganhou ou se pode comprar outra
