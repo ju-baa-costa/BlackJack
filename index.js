@@ -23,6 +23,7 @@ let botaoPassar = document.getElementById("passar-btn")
 
 
 function startGame() { //da as cartas, chama runGame (mostra apenas uma carta do dealer)
+    messageEl.textContent=""
     playerHasBlackJack = false
     playerIsAlive = true
     dealerHasBlackJack = false
