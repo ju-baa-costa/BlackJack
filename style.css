@@ -1,11 +1,17 @@
-body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
-    background-size: cover;
-    font-weight: bold;
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    min-height: 100dvh;
+    width: 100%;
+    background-color: #016f32;
     color: white;
     text-align: center;
-    height: 100vh;
-    margin: 0px;
+  height: 100%;
+    overflow-x: hidden;
+    /* garante que não tenha scroll lateral */
 }
 
 h1 {
@@ -21,9 +27,9 @@ h1 {
     width: 95vw;
 }
 
-#dealer, #jogador {
-    padding: 20px;
-    width: 100px;
+#dealer,
+#jogador {
+
     height: 100%;
     width: 40%;
     justify-content: center;
@@ -32,18 +38,18 @@ h1 {
 }
 
 #botoes {
-    padding: 20px;
-    width: 100px;
+
     height: 100%;
     width: 20%;
 }
 
-.box{
+.box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 #message-el {
     font-style: italic;
 }
@@ -52,8 +58,6 @@ button {
     color: #016f32;
     width: 100%;
     background: goldenrod;
-    padding-top: 5px;
-    padding-bottom: 5px;
     font-weight: bold;
     border: none;
     border-radius: 2px;
@@ -65,4 +69,39 @@ button {
 
 body {
     background-color: #016f32;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        max-width: 480px;
+        margin: 0 auto;
+        height: 100vh;
+    }
+
+    #dealer,
+    #jogador{
+        width: 100%;
+        max-width: 420px;
+        height: 40%;
+    
+    }
+     #botoes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        gap: 1px
+    }
+     #botoes button {
+        flex: 1;           
+        max-width: 120px;  
+        margin: 0;         
+        height: 50px;      
+    }
 }

@@ -23,14 +23,7 @@ let botaoPassar = document.getElementById("passar-btn")
 
 
 function startGame() { //da as cartas, chama runGame (mostra apenas uma carta do dealer)
-    messageEl.textContent=""
-    playerHasBlackJack = false
-    playerIsAlive = true
-    dealerHasBlackJack = false
-    dealerIsAlive = true
-    dealerSum = null
-    dealerSumEl.textContent = "Sum: "
-    isAlive = true
+    zerarVariaveis()
     playerFirst = getRandomCard()
     playerSecond = getRandomCard()
     dealerFirst = getRandomCard()
@@ -55,6 +48,18 @@ function startGame() { //da as cartas, chama runGame (mostra apenas uma carta do
     runPlayerGame()
 }
 
+function zerarVariaveis(){
+    messageEl.textContent=""
+    vencedorEl.textContent=""
+    botaoPassar.textContent="Passar"
+    playerHasBlackJack = false
+    playerIsAlive = true
+    dealerHasBlackJack = false
+    dealerIsAlive = true
+    dealerSum = null
+    dealerSumEl.textContent = "Sum: "
+    isAlive = true
+}
 function runPlayerGame() { // faz a soma das cartas do jogador e do dealer, fala se perdeu, ganhou ou se pode comprar outra
     playerSumEl.textContent = "Sum: " + playerSum
     playerCardsEl.textContent = "Cards: "
@@ -72,6 +77,7 @@ function runPlayerGame() { // faz a soma das cartas do jogador e do dealer, fala
         message = "Ihhh passou"
         messageEl.textContent = message
         playerIsAlive = false
+        botaoPassar.textContent = "Ver a mão do Dealer"
         mensagemVencedor()
     }
 
@@ -87,14 +93,11 @@ function comprarCarta() { //adiciona uma carta ao vetor do player, chama runGame
     }
 }
 
-function passar() {//inicia a sequencia da maquina, comprando ate a soma ser 17 ou mais, no fim, chama quemVenceu()
-    messageEl.textContent = "Hora do Dealer!"
-    dealerTurn()
-}
 
 function dealerTurn() {
+    messageEl.textContent=""
     dealerCardsEl.textContent = "Cards: " + dealerCards[0] + " " + dealerCards[1]
-    if (dealerSum < 17) {
+    if ((dealerSum < 17) && (playerIsAlive)) {
         dealerComprar()
     } else {
         dealerSumEl.textContent = "Sum: " + dealerSum
