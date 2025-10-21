@@ -37,10 +37,13 @@ h1 {
     font-size: 2rem;
 }
 
-#botoes {
+#meio {
 
     height: 100%;
     width: 20%;
+}
+#botoes{
+    width: 100%;
 }
 
 .box {
@@ -81,7 +84,10 @@ body {
         margin: 0 auto;
         height: 100vh;
     }
-
+    #meio{
+        width: 100% ;
+        height: 10%;
+    }
     #dealer,
     #jogador{
         width: 100%;
